@@ -1,17 +1,21 @@
 \section{Used technologies}
 \subsection{Device}
-\subsubsection{Python}
-Libraries
-\begin{enumerate}
- \item python-serial
- \item SocketIO
-\end{enumerate}
-\paragraph{Threads}
-The application on the Raspberry Pi uses threads so the application can simultaneously read data from the Serial Interface to the Arduino and send data to the local database or the server.
 \subsubsection{MySQL}
 When the application can't send data to the remote server, all data is stored on a local MySQL database. MySQL is an open source relational database engine.
-\subsubsection{Web sockets}
+
 \subsubsection{Raspberry Pi}
+
+The Raspberry Pi is a credit card-sized single-board computer developed in the UK by the Raspberry Pi Foundation with the intention of promoting the teaching of basic computer science in schools.\cite{RaspberryWikipedia}
+Because of its low cost, the Raspberry Pi is perfectly suited to be used as computing device for the Quantified Bike. 
+It's not a high-end device, but it is sufficiently fast to process the data for the Quantified Bike.
+
+The application uses the following additional libraries:
+\begin{enumerate}
+ \item \textit{python-serial}: The Arduino sends sensor data to the Raspberry Pi via serial communication.
+ \item \textit{SocketIO}: Websockets are used to communicate with the central database.
+ \item \textit{threading}: The application on the Raspberry Pi uses threads so the application can simultaneously read data from the Serial Interface which is sent by the Arduino and send data to the local database or the server.
+\end{enumerate}
+
 \subsubsection{Arduino Nano}
 The Arduino Nano is a single-board microcontroller, which can be used to simplify building an interactive environment. It gives us the advantage that it becomes rather easy to connect and read sensors and the like, which else would have been a difficult job. A disadvantage to the Arduino however, is the fact that it can only run one thread at a time. This makes reading multiple sensors slightly harder. For example, the GPS module has to wait for a signal, while the temperature sensor gives us a constant signal. Luckily, it still is possible to program the Arduino so that it can read all sensors on the right time and process all the data to the Raspberry Pi.
 To make it possible for the Arduino to read the sensors, we use some custom-made libraries.
