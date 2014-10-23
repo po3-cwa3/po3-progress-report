@@ -111,3 +111,4 @@ sympy-plots-for-*.tex/
 *.backup
 *-swp
 *DS_Store
+*.Thumbs.db
