@@ -26,13 +26,36 @@ To make it possible for the Arduino to read the sensors, we use some custom-made
 
 \subsection{Web interface}
 \subsubsection{Javascript}
-Javascript is a programing language used to program the behavior of a web page. It is easy to implement in a HTML file. An advantage of Javascript is that it is executed on the client side. This way, the web server won't unnecessarily be strained. A disadvantage is that a lot of lines have to be written in order to get some basic functionality. 
-In this project, Javascript is used to create all the functionality on the client site. Without Javascript, the client site would not be able to get any data from the server and would thus be useless. 
+Javascript is a programing language used to program the behavior of a web page.
+It is easy to implement in a HTML file. An advantage of Javascript is that it is
+executed on the client side. This way, the web server won't unnecessarily be strained.
+A disadvantage is that a lot of lines have to be written in order to get some basic
+functionality. In this project, Javascript is used to create all functionality on the
+client side. Without Javascript, the client side would not be able to get any data from
+the server and would thus be useless. 
 
 \subsubsection{JQuery}
-Jquery is a JavaScript library, created to simplify JavaScript programming. Using JQuery, lots of commands are simplified. In almost every JavaScript document used in this project, JQuery commands are present. 
-For the calendar, an external Jquery library 'DataTables' was used. 
-\textbf{RUGEN schrijf hier nog bij}
+Jquery is a JavaScript library, created to simplify JavaScript programming. Using JQuery,
+lots of commands are a lot easier and faster to use. In every JavaScript file used in this
+project, JQuery commands are present.
+
+\subsubsection{DataTables} 
+For the calendar, an external Jquery library 'DataTables' was used. This library makes
+working with HTML tables a whole lot easier. It provides asynchronous initialisation,
+pagination, sorting, etc.
+
+\subsubsection{ScrollTo}
+When a calendar day is clicked, detailed information for that day is presented in a
+details section beneath the calendar. To automatically scroll down to this view, we
+used the external jQuery ScrollTo library. This library still presents a few bugs, so we
+are still looking for an alternative.
+
+\subsubsection{Chart}
+Chart is an external jQuery library for making charts. We have not used this library yet,
+but it seemed easy to use and supports nice animations.
 
 \subsubsection{JSON}
-JSON is a data interchange format. Although it stands for JavaScript Object Notation, it is language independent. JSON is relatively easy to understand and is faster than other similar formats. In this project, JSON is used for data interchange between the client site and the data bank. 
+JSON is a data interchange format. Although it stands for JavaScript Object Notation, it
+is language independent. JSON is relatively easy to understand and is faster than other
+similar formats. In this project, JSON is used for data interchange between the client
+side and the databank. 
