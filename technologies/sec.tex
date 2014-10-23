@@ -4,14 +4,14 @@
 When the application can't send data to the remote server, all data is stored on a local MySQL database. MySQL is an open source relational database engine and is very popular for use in web applications. It is easy to use, installing the software is no big deal, the language can be learned very quickly and it is free. For those reasons we prefer MySQL to other database management systems. Although it has a relative poor performance \cite{MySQLDatarealm}. Too many operations at a given time can give problems. There is no problem for us since it is used in a small application.
 \subsubsection{Raspberry Pi}
 The Raspberry Pi is a credit card-sized single-board computer developed in the UK by the Raspberry Pi Foundation with the intention of promoting the teaching of basic computer science in schools.\cite{RaspberryWikipedia}
-Because of its low cost, the Raspberry Pi is perfectly suited to be used as computing device for the quantified bike. 
-It's not a high-end device, but it is sufficiently fast to process the data for the quantified bike.
+Because of its low cost, the Raspberry Pi is perfectly suited to be used as computing device for the Quantified Bike. 
+It's not a high-end device, but it is sufficiently fast to process the data for the Quantified Bike.
 
 The application uses the following additional libraries:
 \begin{enumerate}
  \item \textit{pySerial}: The Arduino sends sensor data to the Raspberry Pi via serial communication.
  \item \textit{SocketIO}: Communication between web clients and the server occurs freely, persistent and full duplex due to WebSockets \cite{SocketIOKaazing}. The employed application programming interface is called Socket.IO. One of the advantages of Socket.IO is the fact that the best suited real-time communication protocol will be selected. \cite{SocketIOWikipedia}
- \item \textit{threading}: The application on the Raspberry Pi uses threads so the application can simultaneously read data from the Serial Interface which is sent by the Arduino and send data to the local database or the server.
+ \item \textit{threading}: The application on the Raspberry Pi uses threads so the application can simultaneously read data from the serial interface which is sent by the Arduino and send data to the local database or the server.
 \end{enumerate}
 
 \subsubsection{Arduino Nano}
@@ -48,7 +48,7 @@ pagination, sorting, etc.
 \subsubsection{ScrollTo}
 When a calendar day is clicked, detailed information for that day is presented in a
 'details' section beneath the calendar. To automatically scroll down to this view, the application
-uses the external jQuery ScrollTo library. This library still presents a few bugs, so an alternative
+uses the external jQuery ScrollTo library. This library still contains a few bugs, so an alternative
 solution may be necessary.
 
 \subsubsection{Chart}
