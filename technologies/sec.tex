@@ -9,8 +9,9 @@ Libraries
 \paragraph{Threads}
 The application on the Raspberry Pi uses threads so the application can simultaneously read data from the Serial Interface to the Arduino and send data to the local database or the server.
 \subsubsection{MySQL}
-When the application can't send data to the remote server, all data is stored on a local MySQL database. MySQL is an open source relational database engine.
-\subsubsection{Web sockets}
+When the application can't send data to the remote server, all data is stored on a local MySQL database. MySQL is an open source relational database engine and is very popular for use in web applications. It is easy to use, installing the software is no big deal, the language can be learned very quickly and it is free. For those reasons we prefer MySQL to other database management systems. Although it has a relative poor performance. Too many operations at a given time can give problems. There is no problem for us since it is used in a small application.
+\subsubsection{WebSockets}
+Communication between web clients and the server occurs freely, persistent and full duplex due to WebSockets. The employed application programming interface is called Socket.IO. With Socket.IO, the best suited real-time communication protocol will be selected and auto-reconnection is supported.
 \subsubsection{Raspberry Pi}
 \subsubsection{Arduino Nano}
 Libraries
