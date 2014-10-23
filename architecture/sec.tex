@@ -5,7 +5,7 @@ The other one is the web interface.
 \subsection{Device}
 \subsubsection{Arduino Nano}
 The Arduino Nano is connected to a GPS Sensor, a temperature sensor, a humidity sensor, a heart beat sensor and a few buttons and LEDs. 
-The code on the arduino interprets the data coming from the sensors and sends it via a Serial interface to the Raspberry, which is connected via a USB Cable.
+The code on the arduino interprets the data coming from the sensors and sends it via a serial interface to the Raspberry, which is connected via a USB Cable.
 The interval between consecutive data transmissions depends on the kind of sensor. 
 For instance, the state of a push button is sent more frequently than the GPS data.
 All data is sent in a specific format. One packet of sensor data consists of a single line.
