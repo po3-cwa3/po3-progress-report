@@ -1,13 +1,15 @@
 \section{Architecture}
 Our application mainly consists of 3 parts. 
-A Raspberry Pi and an Arduino Nano are mounted on the bike to collect the data. 
-The other one is the web interface.
+A Raspberry Pi and an Arduino Nano are mounted on the bike to collect data. 
+The last part is the web interface.
 \subsection{Device}
 \subsubsection{Arduino Nano}
 \textit{The code for the Arduino can be found on Github: \url{https://github.com/po3-cwa3/po3-quantified-bike-device} in the folder 'arduino'.}
 
 The Arduino Nano is connected to a GPS Sensor, a temperature sensor, a humidity sensor, a heart beat sensor and a few buttons and LEDs. 
-The code on the Arduino interprets the data coming from the sensors and sends it via a serial interface to the Raspberry, which is connected via a USB Cable.
+
+The code on the Arduino interprets the data coming from the sensors and sends it via a serial interface to the Raspberry, which is connected via a USB cable.
+
 The interval between consecutive data transmissions depends on the kind of sensor. 
 For instance, the state of a push button is sent more frequently than the GPS data.
 All data is sent in a specific format. One packet of sensor data consists of a single line.
@@ -17,9 +19,10 @@ The format of the next values depends on the kind of sensor.
 \textit{The code for the Raspberry can be found on Github: \url{https://github.com/po3-cwa3/po3-quantified-bike-device} in the folder 'raspberry'.}
 
 On the Raspberry Pi, a Python application reads data from the Arduino. 
-When an Internet connection is available, the application can send the data to the server in real-time.
+When an internet connection is available, the application can send the data to the server in real-time.
+
 Alternatively, all trip data can be stored in a local MySQL database. 
-As soon as an Internet connection is available, that data can be sent to the server by a separate script.
+As soon as an internet connection is available, that data can be sent to the server by a separate script.
 When that data transmission succeeds, the data is removed from the local database.
 \subsection{Web interface}
 \textit{The code for the website can be found on Github: \url{https://github.com/po3-cwa3/po3-quantified-bike-web}.}
@@ -40,4 +43,4 @@ model uses an array of day objects. These objects all have two properties.
 A properties array is used to identify the different average properties. This array
 is used for the calendar bar property and the details page. For the details page this
 array also holds the postfix and precision of every property. For total distance, the
-postfix would be ' km' for example.
+postfix would be 'km' for example.
