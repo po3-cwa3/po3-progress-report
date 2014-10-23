@@ -18,4 +18,18 @@ Alternatively, all trip data can be stored in a local MySQL database.
 As soon as an internet connection is available, that data can be sent to the server by a separate script.
 When that data transmission succeeds, the data is removed from the local database.
 \subsection{Web interface}
+For the web interface we use one central JavaScript class. This class manages all data queries from the database.
+It also takes care of all necessary initialisations for the main webpage. This includes the calendar initialisation and
+the basic actions initialisation (button actions etc.).
 
+When data gets queried for the current month, the data is temporarily stored. The data
+model uses an array of day objects. These objects all have two properties.
+\begin{enumerate}
+	\item \textit{\textbf{trips} (Array):} contains the trips for that day.
+	\item \textit{\textbf{average} (Object):} contains the averages for that day.
+	Examples are average speed and total distance.
+\end{enumerate}
+A properties array is used to identify the different average properties. This array
+is used for the calendar bar property and the details page. For the details page this
+array also holds the postfix and precision of every property. For total distance, the
+postfix would be 'km' for example.
