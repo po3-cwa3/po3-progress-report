@@ -18,40 +18,40 @@ The application uses the following additional libraries:
 
 \subsubsection{Arduino Nano}
 The Arduino Nano is a single-board microcontroller, which can be used to simplify building an interactive environment. It gives us the advantage that it becomes rather easy to connect and read sensors and the like, which else would have been a difficult job. A disadvantage to the Arduino however, is the fact that it can only run one thread at a time. This makes reading multiple sensors slightly harder. For example, the GPS module has to wait for a signal, while the temperature sensor gives us a constant signal. Luckily, it still is possible to program the Arduino so that it can read all sensors on the right time and process all the data to the Raspberry Pi.
-To make it possible for the Arduino to read the sensors, we use some custom-made libraries.
+To make it possible for the Arduino to read the sensors, some custom-made libraries are used:
 \begin{enumerate}
- \item DHT11 for the temperature-humiditysensor
+ \item DHT11 for the temperature-humidit ysensor
  \item Adafruit\_GPS for the GPS module
 \end{enumerate}
 
 \subsection{Web interface}
-\subsubsection{Javascript}
-Javascript is a programing language used to program the behavior of a web page.
-It is easy to implement in a HTML file. An advantage of Javascript is that it is
-executed on the client side. This way, the web server won't unnecessarily be strained.
+\subsubsection{JavaScript}
+JavaScript is a programing language used to program the behavior of a web page.
+It is easy to implement in a HTML file. An advantage of JavaScript is that it is
+executed on the client side. This way, the web server won't be strained unnecessarily.
 A disadvantage is that a lot of lines have to be written in order to get some basic
-functionality. In this project, Javascript is used to create all functionality on the
-client side. Without Javascript, the client side would not be able to get any data from
+functionality. In this project, JavaScript is used to create all functionality on the
+client side. Without JavaScript, the client side would not be able to get any data from
 the server and would thus be useless. 
 
-\subsubsection{JQuery}
-Jquery is a JavaScript library, created to simplify JavaScript programming. Using JQuery,
+\subsubsection{jQuery}
+jQuery is a JavaScript library, created to simplify JavaScript programming. Using jQuery,
 lots of commands are a lot easier and faster to use. In every JavaScript file used in this
-project, JQuery commands are present.
+project, jQuery commands are present.
 
 \subsubsection{DataTables} 
-For the calendar, an external Jquery library 'DataTables' was used. This library makes
+For the calendar, an external jQuery library 'DataTables' was used. This library makes
 working with HTML tables a whole lot easier. It provides asynchronous initialisation,
 pagination, sorting, etc.
 
 \subsubsection{ScrollTo}
 When a calendar day is clicked, detailed information for that day is presented in a
 details section beneath the calendar. To automatically scroll down to this view, we
-used the external jQuery ScrollTo library. This library still presents a few bugs, so we
-are still looking for an alternative.
+used the external jQuery ScrollTo library. This library still contains a few bugs, so an
+alternative is still to be considered.
 
 \subsubsection{Chart}
-Chart is an external jQuery library for making charts. We have not used this library yet,
+Chart is an external jQuery library for making charts. This library has not been used in the project yet,
 but it seemed easy to use and supports nice animations.
 
 \subsubsection{JSON}
